@@ -145,4 +145,7 @@ $('div.csl-left-margin').remove();
 // Render to a template
 var template = fs.readFileSync('citations.mustache').toString();
 var html = mustache.render(template, {citations: $.html()});
-fs.writeFileSync('citations.html', html);
+if (!fs.existsSync('./build')){
+  fs.mkdirSync('./build');
+}
+fs.writeFileSync('./build/index.html', html);
