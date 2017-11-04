@@ -57,5 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# Temporary request files
+.node-xmlhttprequest-sync-*
+
 # Exclude generated files
 build/
