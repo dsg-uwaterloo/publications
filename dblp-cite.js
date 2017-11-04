@@ -32,15 +32,21 @@ AUTHOR_FIELDS = {
 var citations = {};
 
 // Add a new set of citations to the global object by parsing XML
-function addCitationsFromXml(xml) {
+function addCitationsFromXml(xml, start, end) {
   xml2js.parseString(xml, {trim: true}, function(err, result) {
     result.dblpperson.r.forEach(function(c) {
       // Each article is nested under a key with the type
       var type = Object.keys(c)[0];
       c = c[type][0];
-  
+
+      // Check the publication is within the desired range
+      if ((!isNaN(start) && c.year[0] < start) ||
+          (!isNaN(end) && c.year[0] < end)) {
+        return;
+      }
+
       var csl = {};
-  
+
       // DBLP also includes things such as serving as editor, which we ignore
       if (!c.hasOwnProperty('author')) {
         return;
@@ -93,7 +99,12 @@ function addCitationsFromXml(xml) {
 }
 
 var authors = fs.readFileSync('authors.csv').toString().trim().split('\n');
-authors.forEach(function(author) {
+authors.forEach(function(authorLine) {
+  authorLine = authorLine.split(",");
+  var author = authorLine[0];
+  var start = parseInt(authorLine[1]);
+  var end = parseInt(authorLine[2]);
+
   console.log('Fetching citations for ' + author);
 
   var xhr = new XMLHttpRequest();
@@ -106,7 +117,7 @@ authors.forEach(function(author) {
     xhr.send(null);
   }
 
-  addCitationsFromXml(xhr.responseText);
+  addCitationsFromXml(xhr.responseText, start, end);
 });
 
 // Provide the necessary functions to citeproc
