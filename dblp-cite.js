@@ -125,16 +125,13 @@ var citeprocSys = {
 };
 
 // Get a new engine for a particular citation style
-function getProcessor(styleID) {
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://raw.githubusercontent.com/citation-style-language/styles/master/' + styleID + '.csl', false);
-  xhr.send(null);
-  var styleAsText = xhr.responseText;
+function getProcessor() {
+  var styleAsText = fs.readFileSync('dsg.csl').toString();
   return new citeproc.Engine(citeprocSys, styleAsText);
 };
 
 // Create a new processor and add all the citations
-var processor = getProcessor('ieee');
+var processor = getProcessor();
 processor.updateItems(Object.keys(citations));
 
 // Generate HTML and strip citation numbers
