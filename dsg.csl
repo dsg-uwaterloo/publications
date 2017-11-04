@@ -212,9 +212,6 @@
   </macro>
   <!-- Citation -->
   <citation collapse="citation-number">
-    <sort>
-      <key variable="citation-number"/>
-    </sort>
     <layout delimiter=", ">
       <group prefix="[" suffix="]" delimiter=", ">
         <text variable="citation-number"/>
@@ -224,6 +221,10 @@
   </citation>
   <!-- Bibliography -->
   <bibliography entry-spacing="0" second-field-align="flush">
+    <sort>
+      <key variable="issued" sort="descending"/>
+      <key macro="author"/>
+    </sort>
     <layout suffix=".">
       <!-- Author(s) -->
       <text macro="author" suffix=", "/>
