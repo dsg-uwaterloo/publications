@@ -51,48 +51,48 @@ function addCitationsFromXml(xml, start, end) {
       if (!c.hasOwnProperty('author')) {
         return;
       }
-  
+
       csl['id'] = c['$'].key;
       csl['type'] = TYPES[type];
       csl['author'] = [];
       csl['title'] = c['title'][0];
-  
+
       // Copy fields with their correct names
       Object.keys(CITATION_FIELDS).forEach(function(field) {
         if (c.hasOwnProperty(field)) {
           csl[CITATION_FIELDS[field]] = c[field][0];
         }
       });
-  
+
       // Override the type if this was in a journal
       if (c.hasOwnProperty('journal')) {
         csl['type'] = 'journal';
       }
-  
+
       if (c.hasOwnProperty('year')) {
         csl['issued'] = {'raw': c.year[0]};
       }
-  
+
       // Add all authors
       c.author.forEach(function(author) {
         // Authors with ORCID may not be plain strings
         if (typeof author == 'object') {
           author = author['_'];
         }
-  
+
         var parsed = parseFullName(author.replace(/\s+\d+$/, ''));
         var cslAuthor = {};
-  
+
         // Copy fields to the author
         Object.keys(AUTHOR_FIELDS).forEach(function(field) {
           if (parsed[field]) {
             cslAuthor[AUTHOR_FIELDS[field]] = parsed[field];
           }
         });
-  
+
         csl['author'].push(cslAuthor);
       });
-  
+
       citations[csl['id']] = csl;
     });
   });
