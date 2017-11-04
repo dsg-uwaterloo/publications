@@ -1,4 +1,3 @@
-var cheerio = require('cheerio');
 var citeproc = require('citeproc');
 var fs = require('fs');
 var mustache = require('mustache');
@@ -134,14 +133,10 @@ function getProcessor() {
 var processor = getProcessor();
 processor.updateItems(Object.keys(citations));
 
-// Generate HTML and strip citation numbers
-var citationHTML = processor.makeBibliography()[1].join('\n');
-var $ = cheerio.load(citationHTML);
-$('div.csl-left-margin').remove();
-
-// Render to a template
+// Generate HTML and render to a template
 var template = fs.readFileSync('citations.mustache').toString();
-var html = mustache.render(template, {citations: $.html()});
+var citationHTML = processor.makeBibliography()[1].join('\n');
+var html = mustache.render(template, {citations: citationHTML});
 if (!fs.existsSync('./build')){
   fs.mkdirSync('./build');
 }
