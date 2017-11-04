@@ -14,6 +14,7 @@ TYPES = {
 // Mapping from DBLP citation fields to CSL-JSON
 CITATION_FIELDS = {
   'booktitle': 'container-title',
+  'ee': 'DOI',
   'journal': 'container-title',
   'number': 'issue',
   'pages': 'page',
@@ -131,6 +132,16 @@ var citeprocSys = {
 
   retrieveItem: function(id){
     return citations[id];
+  },
+
+  variableWrapper: function(params, prePunct, str, postPunct) {
+    if (params.variableNames[0] === 'title'
+        && params.itemData.DOI
+        && params.context === "bibliography") {
+      return prePunct + '<a href="' + params.itemData.DOI + '">' + str + '</a>' + postPunct;
+    } else {
+      return (prePunct + str + postPunct);
+    }
   }
 };
 
