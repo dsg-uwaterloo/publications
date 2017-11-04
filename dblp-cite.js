@@ -1,6 +1,7 @@
 var cheerio = require('cheerio');
 var citeproc = require('citeproc');
 var fs = require('fs');
+var mustache = require('mustache');
 var parseFullName = require('parse-full-name').parseFullName;
 var xml2js = require('xml2js');
 var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
@@ -136,14 +137,12 @@ function getProcessor(styleID) {
 var processor = getProcessor('ieee');
 processor.updateItems(Object.keys(citations));
 
-// Generate a simple HTML page
-var html =
-  '<html><head><meta charset="utf-8"></head><body>' +
-  processor.makeBibliography()[1].join('\n') +
-  '</body></html>';
-
-// Strip the citation numbers
-var $ = cheerio.load(html);
+// Generate HTML and strip citation numbers
+var citationHTML = processor.makeBibliography()[1].join('\n');
+var $ = cheerio.load(citationHTML);
 $('div.csl-left-margin').remove();
 
-fs.writeFileSync('citations.html', $.html());
+// Render to a template
+var template = fs.readFileSync('citations.mustache').toString();
+var html = mustache.render(template, {citations: $.html()});
+fs.writeFileSync('citations.html', html);
