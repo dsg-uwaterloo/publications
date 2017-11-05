@@ -7,6 +7,9 @@
       body {
         margin: 1em;
       }
+      h2 {
+        border-bottom: 1px solid #CCC;
+      }
       .citations {
         margin: 0 auto;
         max-width: 720px;
@@ -28,6 +31,11 @@
     </style>
   </head>
   <body>
-    <div class="citations">{{{citations}}}</div>
+    <div class="citations">
+      {{#citations}}
+        <h2>{{year}}</h2>
+        {{{entries}}}
+      {{/citations}}
+    </div>
   </body>
 </html>

@@ -48,9 +48,11 @@ function addCitationsFromXml(xml, start, end) {
       c = c[type][0];
 
       // Check the publication is within the desired range
-      if ((!isNaN(start) && c.year[0] < start) ||
-          (!isNaN(end) && c.year[0] < end)) {
-        return;
+      if (c.hasOwnProperty('year')) {
+        if ((!isNaN(start) && c.year[0] < start) ||
+            (!isNaN(end) && c.year[0] < end)) {
+          return;
+        }
       }
 
       var csl = {};
@@ -82,8 +84,11 @@ function addCitationsFromXml(xml, start, end) {
         csl['type'] = 'journal';
       }
 
+      // Store the citation in the appropriate year
+      var year = 'Unknown';
       if (c.hasOwnProperty('year')) {
-        csl['issued'] = {'raw': c.year[0]};
+        year = c.year[0];
+        csl['issued'] = {'raw': year};
       }
 
       // Add all authors
@@ -106,7 +111,11 @@ function addCitationsFromXml(xml, start, end) {
         csl['author'].push(cslAuthor);
       });
 
-      citations[csl['id']] = csl;
+      if (!citations.hasOwnProperty(year + '')) {
+        citations[year + ''] = {};
+      }
+      csl['id'] = year + ':' + csl['id']
+      citations[year + ''][csl['id']] = csl;
     });
   });
 }
@@ -135,15 +144,15 @@ authors.forEach(function(authorLine) {
 
 // Provide the necessary functions to citeproc
 var citeprocSys = {
-  retrieveLocale: function (lang){
+  retrieveLocale: function (lang) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://raw.githubusercontent.com/Juris-M/citeproc-js-docs/master/locales-' + lang + '.xml', false);
     xhr.send(null);
     return xhr.responseText;
   },
 
-  retrieveItem: function(id){
-    return citations[id];
+  retrieveItem: function(id) {
+    return citations[id.split(':')[0]][id];
   },
 
   variableWrapper: function(params, prePunct, str, postPunct) {
@@ -163,14 +172,28 @@ function getProcessor() {
   return new citeproc.Engine(citeprocSys, styleAsText);
 };
 
-// Create a new processor and add all the citations
+// Generate the HTML for each year
 var processor = getProcessor();
-processor.updateItems(Object.keys(citations));
+var citationsHTML = [];
+var years = Object.keys(citations);
+years.sort(function(a, b) {
+  if (a == b) { return 0; }
+  if (a == 'Unknown') { return 1; }
+  if (b == 'Unknown') { return -1; }
+  return parseInt(b) - parseInt(a);
+});
+years.forEach(function(citationYear) {
+  if (citations.hasOwnProperty(citationYear)) {
+    var entries = citations[citationYear];
+    processor.updateItems(Object.keys(entries));
+    var citationHTML = processor.makeBibliography()[1].join('\n');
+    citationsHTML.push({year: citationYear, entries: citationHTML});
+  }
+});
 
-// Generate HTML and render to a template
+// Render the generated HTML to a template
 var template = fs.readFileSync('citations.mustache').toString();
-var citationHTML = processor.makeBibliography()[1].join('\n');
-var html = mustache.render(template, {citations: citationHTML});
+var html = mustache.render(template, {citations: citationsHTML});
 if (!fs.existsSync('./build')){
   fs.mkdirSync('./build');
 }
