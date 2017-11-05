@@ -66,9 +66,6 @@
     </sort>
     <layout suffix=".">
       <text macro="author" suffix=" "/>
-      <date variable="issued" suffix=". ">
-        <date-part name="year"/>
-      </date>
       <choose>
         <if type="paper-conference">
           <group delimiter=". ">
