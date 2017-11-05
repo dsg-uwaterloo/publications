@@ -30,6 +30,13 @@ AUTHOR_FIELDS = {
   'suffix': 'suffix'
 }
 
+// Load the blacklist
+var blacklist = {};
+var blacklistEntries = fs.readFileSync('blacklist.csv').toString().trim().split('\n');
+blacklistEntries.forEach(function(blacklistEntry) {
+  blacklist[blacklistEntry] = true;
+});
+
 var citations = {};
 
 // Add a new set of citations to the global object by parsing XML
@@ -57,6 +64,11 @@ function addCitationsFromXml(xml, start, end) {
       csl['type'] = TYPES[type];
       csl['author'] = [];
       csl['title'] = c['title'][0];
+
+      // Skip entries in the blacklist
+      if (csl['id'] in blacklist) {
+        return;
+      }
 
       // Copy fields with their correct names
       Object.keys(CITATION_FIELDS).forEach(function(field) {
