@@ -61,6 +61,7 @@
   <bibliography entry-spacing="0" second-field-align="flush">
     <sort>
       <key variable="issued" sort="descending"/>
+      <key variable="container-title"/>
       <key macro="author"/>
     </sort>
     <layout suffix=".">
