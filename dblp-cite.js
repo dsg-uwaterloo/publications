@@ -130,7 +130,7 @@ authors.forEach(function(authorLine) {
   console.log('Fetching citations for ' + author);
 
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'http://dblp.uni-trier.de/pers/' + author + '.xml', false);
+  xhr.open('GET', 'http://dblp.uni-trier.de/pers/xx/' + author, false);
   xhr.send(null);
 
   // Follow possible redirects
