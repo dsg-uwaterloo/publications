@@ -83,7 +83,7 @@ function addCitationsFromXml(xml, start, end) {
 
       // Override the type if this was in a journal
       if (c.hasOwnProperty('journal')) {
-        csl['type'] = 'journal';
+        csl['type'] = 'article-journal';
       }
 
       // Store the citation in the appropriate year
