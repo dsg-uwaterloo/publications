@@ -2,6 +2,8 @@ var citeproc = require('citeproc');
 var fs = require('fs');
 var mustache = require('mustache');
 var parseFullName = require('parse-full-name').parseFullName;
+var striptags = require('striptags');
+var unidecode = require('unidecode');
 var xml2js = require('xml2js');
 var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 
@@ -167,14 +169,16 @@ var citeprocSys = {
 };
 
 // Get a new engine for a particular citation style
-function getProcessor() {
-  var styleAsText = fs.readFileSync('dsg.csl').toString();
+function getProcessor(style) {
+  var styleAsText = fs.readFileSync(style).toString();
   return new citeproc.Engine(citeprocSys, styleAsText);
 };
 
 // Generate the HTML for each year
-var processor = getProcessor();
+var processor = getProcessor('dsg.csl');
+var bibtexProcessor = getProcessor('bibtex.csl')
 var citationsHTML = [];
+var bibtex = '';
 var years = Object.keys(citations);
 years.sort(function(a, b) {
   if (a == b) { return 0; }
@@ -188,6 +192,15 @@ years.forEach(function(citationYear) {
     processor.updateItems(Object.keys(entries));
     var citationHTML = processor.makeBibliography()[1].join('\n');
     citationsHTML.push({year: citationYear, entries: citationHTML});
+
+    bibtexProcessor.updateItems(Object.keys(entries));
+    var citationsBibtex = bibtexProcessor.makeBibliography()[1].map(function(ref) {
+      ref = striptags(ref);
+      return ref.replace(/^\s+@([a-z]+){([^,]+)/i, function(match, type, key) {
+        return '@' + type + '{' + unidecode(key.replace(/\s/, ''));
+      });
+    }).join('\n');
+    bibtex += citationsBibtex;
   }
 });
 
@@ -198,3 +211,4 @@ if (!fs.existsSync('./build')){
   fs.mkdirSync('./build');
 }
 fs.writeFileSync('./build/index.html', html);
+fs.writeFileSync('./build/dsg.bib', bibtex);
