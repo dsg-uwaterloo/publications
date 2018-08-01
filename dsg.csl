@@ -46,13 +46,6 @@
       <label form="short" prefix=", "/>
     </names>
   </macro>
-  <macro name="access">
-    <choose>
-      <if type="article-journal" match="any">
-        <text variable="DOI" prefix=". DOI:https://doi.org/"/>
-      </if>
-    </choose>
-  </macro>
   <citation collapse="citation-number">
     <layout prefix="[" suffix="]" delimiter=", ">
       <text variable="citation-number"/>
@@ -160,7 +153,6 @@
           </group>
         </else>
       </choose>
-      <text macro="access"/>
     </layout>
   </bibliography>
 </style>
