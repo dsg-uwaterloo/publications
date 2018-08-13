@@ -43,6 +43,9 @@ var citations = {};
 
 // Add a new set of citations to the global object by parsing XML
 function addCitationsFromXml(xml, start, end) {
+  // XXX This is an ugly hack to fix titles with <i> tags
+  xml = xml.replace(/<i>(.*?)<\/i>/ig, '$1');
+
   xml2js.parseString(xml, {trim: true}, function(err, result) {
     result.dblpperson.r.forEach(function(c) {
       // Each article is nested under a key with the type
