@@ -7,6 +7,13 @@ var unidecode = require('unidecode');
 var xml2js = require('xml2js');
 var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 
+// Load translation tables for UTF-8 to LaTeX
+var translation = require('arxiv-latex-to-utf8/translation')
+var toLaTeX = Object.keys(translation).reduce(function(obj, key) {
+  obj[translation[key]] = key;
+  return obj;
+}, {});
+
 // Mapping from DBLP types to CSL-JSON
 TYPES = {
   'article': 'article',
@@ -203,6 +210,11 @@ years.forEach(function(citationYear) {
         return '@' + type + '{' + unidecode(key.replace(/\s/, ''));
       });
     }).join('\n');
+
+    // Hack to replace unicode with proper LaTeX
+    Object.keys(toLaTeX).forEach(function(key) {
+      citationsBibtex = citationsBibtex.replace(new RegExp(key, 'g'), toLaTeX[key]);
+    });
     bibtex += citationsBibtex;
   }
 });

@@ -1,6 +1,7 @@
 {
   "name": "dblp-cite",
   "dependencies": {
+    "arxiv-latex-to-utf8": "^1.0.1",
     "citeproc": "^2.1.179",
     "mustache": "^2.3.0",
     "parse-full-name": "^1.2.3",
