@@ -1,31 +1,19 @@
-# DBLP-cite
+# DSG Publications automation
 
-This is a simple script which pulls a publication list from DBLP and produces and produces a list of citations formatted as HTML.
-The script requires [Node.js](https://nodejs.org/) and dependencies can be installed with `npm install`.
-All authors are stored in [`authors.csv`](authors.csv) where each line is just the last two components of the DBLP URL for an author in the first column and a start and end year in the second column.
-In case DBLP misattributes a publication, the key for a specific publication which should *not* be included can be added to [`blacklist.csv`](blacklist.csv).
-Running `node dblp-cite.js` will download the citations for each author and write HTML to `build/index.html` and BibTeX to `build/dsg.bib`.
+This is a Python script which pulls publication lists from DBLP for the specified set of authors and automatically updates the Data Systems Group publications website using [Selenium][0].
 
 ## Usage
 
-This repository has been tested with Node.js Carbon.
-First run `npm install` to install the necessary dependencies.
-You can test locally by running `node dblp-cite.js`.
-To actually deploy the changes, just push to GitHub.
-Building the page is automatically done by [Travis CI](https://travis-ci.org/) and deployed via [GitHub Pages](https://docs.travis-ci.com/user/deployment/pages/).
-To trigger updates without actually changing the code, you can visit the [builds page](https://travis-ci.org/dsg-uwaterloo/publications/builds) on Travis and select "Trigger build" under "More options" in the top-right.
-This could certainly be automated with a cron job using the [Travis API](https://docs.travis-ci.com/user/triggering-builds/).
+The entire script is stored as a [Jupyter Notebook][1]. Use [Conda][2] or your favorite Python package manager to install the following packages:
 
-## Citation retrieval
+* jupyterlab
+* pprint
+* titlecase
+* bibtexparser
+* selenium + a webdriver
 
-Retrieving data from DBLP consists of the following steps:
+Then start Jupyter using `jupyter lab` and open `Automate.ipynb`. The notebook contains comments explaining how the code is structured and how to use it.
 
-1. Download the XML for each author
-2. Convert the XML to Javascript objects with [xml2js](https://github.com/Leonidas-from-XIV/node-xml2js)
-3. Reformat the objects into CSL-JSON (change from DBLP entry types to CSL-JSON types, rename fields, etc.)
-
-## Formatting
-
-The formatting of bibliography entries is done using the [Citation Style Language](https://citationstyles.org/).
-There is one style for the [HTML](dsg.csl) and another for [BibTeX](bibtex.csl).
-These styles can be customized as needed.
+[0] https://www.selenium.dev
+[1] https://jupyter.org
+[2] https://www.anaconda.com/products/individual

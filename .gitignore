@@ -62,3 +62,4 @@ typings/
 
 # Exclude generated files
 build/
+.ipynb_checkpoints
