@@ -1670,3 +1670,9 @@ DBLP:series/synthesis/2013Ng,5142
 DBLP:phd/basesearch/Golab06,5143
 DBLP:phd/basesearch/He18e,5144
 DBLP:phd/ndltd/Lin04,5145
+DBLP:journals/pvldb/LiuKTDH21,5147
+DBLP:conf/acl/BaiSLTXGLL21,5148
+DBLP:conf/clef/ZhongZXZL21,5149
+DBLP:journals/pvldb/GuptaMS21,5150
+DBLP:journals/corr/abs-2108-10540,5151
+DBLP:conf/clef/NgFKT21,5154
