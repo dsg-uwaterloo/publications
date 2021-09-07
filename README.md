@@ -14,6 +14,6 @@ The entire script is stored as a [Jupyter Notebook][1]. Use [Conda][2] or your f
 
 Then start Jupyter using `jupyter lab` and open `Automate.ipynb`. The notebook contains comments explaining how the code is structured and how to use it.
 
-[0] https://www.selenium.dev
-[1] https://jupyter.org
-[2] https://www.anaconda.com/products/individual
+[0]: https://www.selenium.dev
+[1]: https://jupyter.org
+[2]: https://www.anaconda.com/products/individual
