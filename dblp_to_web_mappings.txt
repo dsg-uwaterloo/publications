@@ -1676,3 +1676,12 @@ DBLP:conf/clef/ZhongZXZL21,5149
 DBLP:journals/pvldb/GuptaMS21,5150
 DBLP:journals/corr/abs-2108-10540,5151
 DBLP:conf/clef/NgFKT21,5154
+DBLP:journals/corr/abs-2109-00062,5158
+DBLP:journals/corr/abs-2109-10739,5159
+DBLP:journals/cacm/SakrBVIAAAABBDV21,5160
+DBLP:conf/desires/AnandZDXL21,5161
+DBLP:conf/desires/LinMMM21,5162
+DBLP:conf/ictir/HanLL21,5163
+DBLP:journals/corr/abs-2109-01628,5164
+DBLP:conf/dlog/TomanW21,5165
+DBLP:conf/clef/NgFKT20,5166
