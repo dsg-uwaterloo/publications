@@ -1,0 +1,5 @@
+id	btype	title	author	year	journal	volume	number	pages	booktitle	publisher	school	doi	url
+DBLP:journals/corr/abs-2109-13908	article	The eDiscovery Medicine Show	Maura Grossman and Gordon Cormack	2021	ArXiv	abs/2109.13908							https://arxiv.org/abs/2109.13908
+DBLP:journals/corr/abs-2110-01529	article	A Proposed Conceptual Framework for a Representational Approach To Information Retrieval	Jimmy Lin	2021	ArXiv	abs/2110.01529							https://arxiv.org/abs/2110.01529
+DBLP:journals/corr/abs-2110-01599	article	Encoder Adaptation of Dense Passage Retrieval for Open-Domain Question Answering	Minghan Li and Jimmy Lin	2021	ArXiv	abs/2110.01599							https://arxiv.org/abs/2110.01599
+DBLP:journals/corr/abs-2110-11540	article	Wacky Weights in Learned Sparse Representations and the Revenge Of Score-at-a-Time Query Evaluation	Joel Mackenzie and Andrew Trotman and Jimmy Lin	2021	ArXiv	abs/2110.11540							https://arxiv.org/abs/2110.11540

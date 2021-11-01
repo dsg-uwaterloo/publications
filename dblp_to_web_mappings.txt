@@ -1685,3 +1685,7 @@ DBLP:conf/ictir/HanLL21,5163
 DBLP:journals/corr/abs-2109-01628,5164
 DBLP:conf/dlog/TomanW21,5165
 DBLP:conf/clef/NgFKT20,5166
+DBLP:journals/corr/abs-2109-13908,5189
+DBLP:journals/corr/abs-2110-01529,5190
+DBLP:journals/corr/abs-2110-01599,5191
+DBLP:journals/corr/abs-2110-11540,5192
