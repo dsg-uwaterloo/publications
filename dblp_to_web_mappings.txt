@@ -1711,3 +1711,12 @@ DBLP:journals/corr/abs-2112-04666,5217
 DBLP:journals/corr/abs-2112-06400,5218
 DBLP:journals/corr/abs-2112-09628,5219
 DBLP:journals/tkdd/SheshboloukiO22,5220
+DBLP:conf/wsdm/0001SRC22,5221
+DBLP:conf/edm/ChopraG21,5222
+DBLP:conf/edm/ParsaG21,5223
+DBLP:conf/fab/MitraGGK21,5224
+DBLP:journals/pvldb/SuriIRR21,5225
+DBLP:conf/wsdm/DevinsTL22,5226
+DBLP:journals/corr/abs-2201-11086,5227
+DBLP:journals/debu/Ozsu20,5228
+DBLP:journals/corr/abs-2202-01281,5229
