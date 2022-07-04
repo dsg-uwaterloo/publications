@@ -1,0 +1,3 @@
+id	btype	title	author	year	journal	volume	number	pages	booktitle	publisher	school	doi	url
+DBLP:journals/corr/abs-2204-10362	article	Human Preferences as Dueling Bandits	Xinyi Yan and Chengxi Luo and Charles Clarke and Nick Craswell and Ellen M. Voorhees and Pablo Castells	2022	ArXiv	abs/2204.10362						10.48550/arXiv.2204.10362	https://doi.org/10.48550/arXiv.2204.10362
+DBLP:conf/ntcir/ClarkeKS17	inproceedings	Preface From NTCIR-13 General Chairs	Charles Clarke and Noriko Kando and Tetsuya Sakai	2017					Conference on Evaluation of Information Access Technologies (NTCIR)				https://research.nii.ac.jp/ntcir/workshop/OnlineProceedings13/pdf/ntcir/01-NTCIR13-PREFACE.pdf
