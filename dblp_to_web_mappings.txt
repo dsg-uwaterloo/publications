@@ -1781,3 +1781,9 @@ DBLP:journals/corr/abs-2208-00273,5319
 DBLP:phd/us/Salihoglu15,5320
 DBLP:conf/clef/KaneNT22,5321
 DBLP:phd/ca/Weddell85,5322
+DBLP:journals/pvldb/AbebeLD22,5324
+DBLP:journals/pvldb/DadvarGS22,5325
+DBLP:conf/wadl/WangLML17,5326
+DBLP:journals/pvldb/AmmarSSO22,5327
+DBLP:journals/toit/XiaZJO22,5328
+DBLP:journals/pvldb/MhedhbiS22,5329
