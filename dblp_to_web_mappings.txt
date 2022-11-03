@@ -1787,3 +1787,11 @@ DBLP:conf/wadl/WangLML17,5326
 DBLP:journals/pvldb/AmmarSSO22,5327
 DBLP:journals/toit/XiaZJO22,5328
 DBLP:journals/pvldb/MhedhbiS22,5329
+DBLP:conf/cikm/ArabzadehSC22,5333
+DBLP:conf/cikm/ShehataAC22,5334
+DBLP:journals/corr/abs-2210-04885,5335
+DBLP:journals/corr/abs-2210-05481,5336
+DBLP:journals/corr/abs-2210-07093,5337
+DBLP:journals/corr/abs-2210-08729,5338
+DBLP:journals/corr/abs-2210-09984,5339
+DBLP:journals/corr/abs-2210-13693,5340
