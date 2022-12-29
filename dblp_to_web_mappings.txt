@@ -1795,3 +1795,15 @@ DBLP:journals/corr/abs-2210-07093,5337
 DBLP:journals/corr/abs-2210-08729,5338
 DBLP:journals/corr/abs-2210-09984,5339
 DBLP:journals/corr/abs-2210-13693,5340
+DBLP:journals/ir/ArabzadehVYC22,5346
+DBLP:journals/pvldb/PappachanZHM22,5347
+DBLP:journals/pvldb/GhayyurGHM22,5348
+DBLP:journals/corr/abs-2207-08757,5349
+DBLP:journals/corr/abs-2211-15732,5350
+DBLP:journals/ftdb/NearH21,5351
+DBLP:journals/corr/abs-2211-00734,5352
+DBLP:journals/corr/abs-2211-10411,5353
+DBLP:journals/corr/abs-2211-11740,5354
+DBLP:conf/ausai/BorgidaFTW22,5355
+DBLP:conf/dlog/BorgidaFTW22,5356
+DBLP:conf/ruleml/Feng0W22,5357
