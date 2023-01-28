@@ -1807,3 +1807,13 @@ DBLP:journals/corr/abs-2211-11740,5354
 DBLP:conf/ausai/BorgidaFTW22,5355
 DBLP:conf/dlog/BorgidaFTW22,5356
 DBLP:conf/ruleml/Feng0W22,5357
+DBLP:journals/corr/abs-2301-04248,5365
+DBLP:journals/pvldb/MazmudarHLR022,5366
+DBLP:journals/debu/IlyasN22,5367
+DBLP:journals/corr/abs-2301-07006,5368
+DBLP:journals/corr/abs-2212-05150,5369
+DBLP:journals/corr/abs-2212-09410,5370
+DBLP:journals/corr/abs-2212-10496,5371
+DBLP:journals/corr/abs-2212-13534,5372
+DBLP:journals/pvldb/Wang0IOA22,5373
+DBLP:journals/cbm/GoralwallaOS97,5374
