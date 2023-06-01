@@ -1845,3 +1845,15 @@ DBLP:conf/emnlp/ZhongXVMLLBS22,5401
 DBLP:conf/acl-louhi/PradeepMNL21,5402
 DBLP:journals/corr/abs-2303-13844,5403
 DBLP:conf/chi/LiuUZS23,5404
+DBLP:conf/chiir/BuchananMC23,5407
+DBLP:journals/corr/abs-2305-06984,5408
+DBLP:conf/evia/Clarke19,5409
+DBLP:conf/atal/HebertGPC23,5410
+DBLP:conf/webi/HebertGC22,5411
+DBLP:journals/corr/abs-2305-09464,5412
+DBLP:journals/corr/abs-2304-12139,5413
+DBLP:journals/corr/abs-2305-02156,5414
+DBLP:journals/corr/abs-2305-06300,5415
+DBLP:journals/corr/abs-2305-08271,5416
+DBLP:journals/corr/abs-2305-11841,5417
+DBLP:conf/nips/JiangDXLL22,5418
