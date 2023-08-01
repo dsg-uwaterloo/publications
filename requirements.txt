@@ -1,3 +1,4 @@
-bibtexparser==1.4.0
-selenium==4.10.0
-titlecase==2.4
+bibtexparser
+selenium
+titlecase
+chromedriver_autoinstaller
