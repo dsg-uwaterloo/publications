@@ -1911,3 +1911,11 @@ DBLP:journals/sigmod/ChenHWSS23,5501
 DBLP:conf/vldb/UstaS23,5502
 DBLP:conf/trec/TahamiZS22,5503
 DBLP:conf/trec/AbualsaudGMZCST21,5504
+DBLP:journals/corr/abs-2309-11392,5507
+DBLP:journals/corr/abs-2309-10240,5508
+DBLP:journals/corr/abs-2309-11669,5509
+DBLP:conf/clef/ZhongXL23,5510
+DBLP:journals/corr/abs-2309-04919,5511
+DBLP:journals/corr/abs-2309-07574,5512
+DBLP:conf/desires/KamphuisHLV22,5513
+DBLP:journals/tweb/SheshboloukiO23,5514
