@@ -1919,3 +1919,16 @@ DBLP:journals/corr/abs-2309-04919,5511
 DBLP:journals/corr/abs-2309-07574,5512
 DBLP:conf/desires/KamphuisHLV22,5513
 DBLP:journals/tweb/SheshboloukiO23,5514
+DBLP:journals/pvldb/DadvarGS23,5515
+DBLP:journals/corr/abs-2310-11548,5516
+DBLP:journals/corr/abs-2310-17119,5517
+DBLP:journals/tois/MackenzieTL23,5518
+DBLP:journals/tois/LinL23,5519
+DBLP:conf/cikm/MaTL23,5520
+DBLP:journals/corr/abs-2309-15088,5521
+DBLP:journals/corr/abs-2310-07712,5522
+DBLP:journals/corr/abs-2310-08319,5523
+DBLP:journals/tkde/ZengZO23,5524
+DBLP:conf/cikm/PangY0O23,5525
+DBLP:conf/dlog/FengBFP0W23,5526
+DBLP:journals/pvldb/KassaieT23,5527
