@@ -1932,3 +1932,12 @@ DBLP:journals/tkde/ZengZO23,5524
 DBLP:conf/cikm/PangY0O23,5525
 DBLP:conf/dlog/FengBFP0W23,5526
 DBLP:journals/pvldb/KassaieT23,5527
+DBLP:conf/sigir-ap/HuoAC23,5531
+DBLP:journals/corr/abs-2311-15781,5532
+DBLP:conf/sigir-ap/MaFYML23,5533
+DBLP:journals/corr/abs-2311-05800,5534
+DBLP:journals/corr/abs-2311-09175,5535
+DBLP:journals/corr/abs-2311-18503,5536
+DBLP:journals/corr/abs-2311-18812,5537
+DBLP:journals/corr/abs-2311-03542,5538
+DBLP:journals/sigmod/Salihoglu23,5539
