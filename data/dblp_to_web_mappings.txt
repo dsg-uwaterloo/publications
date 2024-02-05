@@ -1951,3 +1951,10 @@ DBLP:conf/emnlp/LinAL23,5546
 DBLP:journals/corr/abs-2312-01556,5547
 DBLP:journals/corr/abs-2312-02724,5548
 DBLP:journals/corr/abs-2312-02969,5549
+DBLP:journals/corr/abs-2401-04842,5550
+DBLP:journals/sigir/BauerCFFBBCCDNDFFFHHHJKKKKLMMPPRS23,5551
+DBLP:journals/corr/abs-2312-09424,5552
+DBLP:journals/tois/ZhangOML24,5553
+DBLP:journals/corr/abs-2312-11361,5554
+DBLP:journals/corr/abs-2312-16098,5555
+DBLP:journals/corr/abs-2312-16159,5556
