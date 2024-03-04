@@ -1958,3 +1958,7 @@ DBLP:journals/tois/ZhangOML24,5553
 DBLP:journals/corr/abs-2312-11361,5554
 DBLP:journals/corr/abs-2312-16098,5555
 DBLP:journals/corr/abs-2312-16159,5556
+DBLP:journals/corr/abs-2401-17543,5561
+DBLP:journals/corr/abs-2402-09015,5562
+DBLP:conf/ppopp/Khalaji0DA24,5563
+DBLP:conf/fire/AdeyemiO0ARCL23,5564
