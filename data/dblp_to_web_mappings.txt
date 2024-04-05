@@ -1962,3 +1962,13 @@ DBLP:journals/corr/abs-2401-17543,5561
 DBLP:journals/corr/abs-2402-09015,5562
 DBLP:conf/ppopp/Khalaji0DA24,5563
 DBLP:conf/fire/AdeyemiO0ARCL23,5564
+DBLP:conf/eacl/ArabzadehC24,5570
+DBLP:conf/ecir/ArabzadehGRCZ24,5571
+DBLP:conf/ecir/ArabzadehBC24,5572
+DBLP:conf/ecir/AzzopardiCKMTR24,5573
+DBLP:journals/pvldb/HildredAD23,5574
+DBLP:conf/aaai/HebertSGSGC24,5575
+DBLP:conf/aaai/LinLGML24,5576
+DBLP:conf/ecir/PradeepL24,5577
+DBLP:conf/wsdm/XianTPL24,5578
+DBLP:conf/edbt/UstaLS24,5579
