@@ -1972,3 +1972,7 @@ DBLP:conf/aaai/LinLGML24,5576
 DBLP:conf/ecir/PradeepL24,5577
 DBLP:conf/wsdm/XianTPL24,5578
 DBLP:conf/edbt/UstaLS24,5579
+DBLP:journals/cacm/FaggioliDCDHHKKPSW24,5581
+DBLP:journals/corr/abs-2404-04044,5582
+DBLP:conf/csci/ParsaSXYYG22,5583
+DBLP:journals/debu/Ren0PCMI0R23,5584
