@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Machine Learning in Computer Vision",
+        "authors": ["John Smith", "Alice Johnson"],
+        "year": 2022,
+        "type": "conference",
+        "venue": "CVPR 2022",
+        "doi": "10.1109/CVPR.2022.123"
+    },
+    {
+        "title": "Quantum Computing Foundations",
+        "authors": ["Emily Davis"],
+        "year": 2023,
+        "type": "journal",
+        "venue": "Nature Physics",
+        "doi": "10.1038/s41567-023-01234-5"
+    }
+]
